@@ -1,0 +1,10 @@
+1/1/2023
+
+- History module integrated into the tab container system
+- Message logging
+- Localization
+- Tab modes (compact mode, message preview mode)
+- Tab customization
+- More customization (borders, background images/textures, gradients)
+- Support for chat channels
+- Code cleanup

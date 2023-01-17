@@ -1,0 +1,218 @@
+<Ui>
+
+	<Scrollframe name="SessionsQuickListTemplate" inherits="UIPanelScrollFrameTemplate" virtual="true">
+		<Size x="280" y="150"/>
+		
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BG" setAllPoints="true">
+					<Color r="0" g="0" b="0" a="1"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+		<Scrollchild>
+			<Frame parentKey="ListFrame" setAllPoints="true">
+				<Size x="300" y="150"/>	
+			</Frame>
+		</Scrollchild>
+		
+	</Scrollframe>
+	
+	
+	
+	<Button name="SessionsQuickItemTemplate" virtual="true">
+		<Size x="280" y="20"/>
+		<HighlightTexture file="Interface\BUTTONS\UI-Listbox-Highlight" alphaMode="ADD"/>
+		
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString parentKey="label" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="LEFT"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+
+	</Button>
+	
+	
+	
+	<Frame name="SessionsNoticeTemplate" virtual="true">
+		<Size x="32" y="14"/>
+		
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BG" setAllPoints="true">
+					<Color r="1" g="1" b="1"/>
+				</Texture>
+			</Layer>
+			
+			<Layer level="ARTWORK">
+				<FontString parentKey="text" justifyH="LEFT" inherits="NumberFont_Shadow_Med">
+					<Color r="1" g="1" b="1"/>
+					<Anchors>
+						<Anchor point="CENTER" relativePoint="LEFT">
+							<Offset x="-3" y="5"/>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				
+				<FontString parentKey="title" justifyH="LEFT" inherits="Game10Font_o1">
+					<Color r="1" g="1" b="1"/>
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="LEFT">
+							<Offset x="5" y="0"/>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				
+				<Texture parentKey="icon" file="Interface\Worldmap\ChatBubble_64Grey">
+					<Size x="32" y="32"/>
+					<Anchors>
+						<Anchor point="CENTER" relativePoint="LEFT">
+							<Offset x="-1" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+	</Frame>
+	
+	
+	
+	<Button name="SessionsHubTemplate" virtual="true" clampedToScreen="true" registerForClicks="AnyUp" movable="true">
+		<Size x="32" y="32"/>
+		<NormalTexture file="Interface\BUTTONS\UI-SquareButton-Up"/>
+		<PushedTexture file="Interface\BUTTONS\UI-SquareButton-Down"/>
+		<HighlightTexture file="Interface\BUTTONS\UI-Common-MouseHilight" alphaMode="ADD"/>
+	
+		<Layers>
+			<Layer level="OVERLAY">
+				<Texture parentKey="icon" file="Interface\HELPFRAME\ReportLagIcon-Mail">
+					<Size x="24" y="24"/>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</Texture>
+				
+				<Texture parentKey="glow" file="Interface\BUTTONS\CheckButtonHilight-Blue" alpha="0">
+					<Size x="40" y="40"/>
+					<Anchors>
+						<Anchor point="CENTER"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		
+		<Animations>
+			<AnimationGroup parentKey="anim" looping="Bounce">
+				<Alpha childKey="glow" duration="0.5" fromAlpha="0" toAlpha="1"/>
+			</AnimationGroup>
+		</Animations>
+		
+	</Button>
+	
+	
+	
+	<CheckButton name="SessionsCheckButtonTemplate" virtual="true" inherits="SettingsCheckBoxTemplate">
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString parentKey="label" inherits="GameFontNormal">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="5" y="1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		
+	</CheckButton>
+	
+	
+	
+	<Frame name="SessionsTabTemplate" virtual="true" enableMouse="true" clipChildren="true" inherits="BackdropTemplate">
+		<Size x="120" y="40"/>
+		
+		<Layers>
+			<Layer level="BACKGROUND" textureSubLevel="1">
+				<Texture parentKey="BG" setAllPoints="true">
+					<Color r="1" g="1" b="1"/>
+				</Texture>
+			</Layer>
+			<Layer level="BACKGROUND" textureSubLevel="2">
+				<Texture parentKey="portrait" alpha="0.8">
+					<Size x="48" y="48"/>
+					<Anchors>
+						<Anchor point="RIGHT" x="2" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			
+			<Layer level="ARTWORK">
+				<FontString parentKey="sessionName" inherits="SystemFont_Shadow_Med2_Outline" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="3" y="-4"/>
+						<Anchor point="BOTTOMRIGHT" x="-1" y="15"/>
+					</Anchors>
+				</FontString>
+				<FontString parentKey="infoString" inherits="Game10Font_o1" justifyH="LEFT">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" x="3" y="5"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+			
+			<Layer level="HIGHLIGHT">
+				<Texture parentKey="highlight" file="Interface\BUTTONS\UI-Listbox-Highlight2" alpha="0.2" alphaMode="ADD" setAllPoints="true"/>
+			</Layer>
+			
+			<Layer level="OVERLAY">
+				<Texture parentKey="glow" file="Interface\FriendsFrame\UI-FriendsFrame-HighlightBar" alpha="0" alphaMode="ADD" setAllPoints="true"/>
+			</Layer>
+		</Layers>
+		
+		<Animations>
+			<AnimationGroup parentKey="animation" looping="Bounce">
+				<Alpha childKey="glow" duration="0.7" fromAlpha="0" toAlpha="0.7"/>
+			</AnimationGroup>
+		</Animations>
+		
+		<Frames>
+			<Frame parentKey="notification" hidden="true">
+				<Size x="16" y="16"/>
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="-3" y="-3"/>
+				</Anchors>
+				
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="BG" setAllPoints="true"/>
+					</Layer>
+					<Layer level="ARTWORK">
+						<FontString parentKey="num" inherits="NumberFont_Shadow_Med">
+							<Anchors>
+								<Anchor point="CENTER"/>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		
+	</Frame>
+	<EditBox name="editboxtest" virtual="true">
+		<Scripts>
+			<OnLoad>
+				self:SetAutoFocus(false)
+				
+			</OnLoad>
+		</Scripts>
+	</EditBox>
+	
+</Ui>

@@ -1,0 +1,11 @@
+<Ui>
+	<Include file="Templates.xml"/>
+	<Include file="MainUI.lua"/>
+	<Include file="SecureEditbox.lua"/>
+	<Script file="Page.lua"/>
+	<Script file="Suggestion.lua"/>
+	<Script file="Tab.lua"/>
+	<Script file="Slider.lua"/>
+	<Script file="Hub.lua"/>
+	<Script file="PanelHelper.lua"/>
+</Ui>

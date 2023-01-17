@@ -1,0 +1,21 @@
+## Interface: 100002
+## DefaultState: enabled
+## Title: Sessions Messenger
+## Notes: "A neat chat interface that cures your depression <3"
+## LoadOnDemand: 0
+## SavedVariables: SESMSG_Profile, SESMSG_History
+
+Libraries\ChatThrottleLib.lua
+Libraries\LibStub\LibStub.lua
+Libraries\CallbackHandler-1.0\CallbackHandler-1.0.lua
+Libraries\LibSharedMedia-3.0\lib.xml
+
+Boot.lua
+Locales\frFR.lua
+Interface\Interface.xml
+Session.lua
+Behaviour.lua
+Options.lua
+History.lua
+MessageHandler.lua
+Interface\Editmode.lua

@@ -1,0 +1,14 @@
+<Bindings>
+	<Binding name="SMToggle" header="SESSIONSMSGR" category="ADDONS">
+		SessionsMessenger_MainFrame:Toggle()
+	</Binding>
+	
+	<Binding name="SMTalkToUnit" category="ADDONS">
+		AddOn_SessionsMessenger:CreateFromUnit()
+	</Binding>
+	
+	<Binding name="SMChatOverride" category="ADDONS">
+		SessionsMessenger_MainFrame:OpenChat()
+	</Binding>
+</Bindings>
+
